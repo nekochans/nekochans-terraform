@@ -3,6 +3,6 @@ terraform {
     bucket  = "stg-nekochans-portfolio-tfstate"
     key     = "acm/terraform.tfstate"
     region  = "ap-northeast-1"
-    profile = "nekochans-dev"
+    profile = "nekochans-portfolio"
   }
 }
