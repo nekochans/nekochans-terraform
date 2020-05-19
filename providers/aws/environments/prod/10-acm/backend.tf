@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket  = "prod-nekochans-portfolio"
+    bucket  = "prod-nekochans-portfolio-tfstate"
     key     = "acm/terraform.tfstate"
     region  = "ap-northeast-1"
-    profile = "nekochans-dev"
+    profile = "nekochans-portfolio"
   }
 }
