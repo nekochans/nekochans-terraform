@@ -9,7 +9,7 @@ data "terraform_remote_state" "acm" {
   backend = "s3"
 
   config = {
-    bucket  = "stg-nekochans-portfolio-tfstate"
+    bucket  = "prod-nekochans-portfolio-tfstate"
     key     = "acm/terraform.tfstate"
     region  = "ap-northeast-1"
     profile = "nekochans-portfolio"

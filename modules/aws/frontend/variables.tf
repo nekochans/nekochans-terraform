@@ -28,7 +28,7 @@ variable "sub_domain_name" {
   default     = ""
 }
 
-variable "acm" {
+variable "us_east_1_acm" {
   type = map(string)
 
   default = {}
