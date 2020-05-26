@@ -17,7 +17,7 @@ resource "aws_cloudfront_distribution" "frontend" {
   enabled         = true
   is_ipv6_enabled = true
 
-  aliases = ["${var.sub_domain_name}.${var.main_domain_name}"]
+  aliases = var.env == "prod" ? [var.main_domain_name] : ["${var.sub_domain_name}.${var.main_domain_name}"]
 
   default_cache_behavior {
     allowed_methods  = ["GET", "HEAD", "OPTIONS"]
@@ -57,7 +57,7 @@ resource "aws_cloudfront_distribution" "frontend" {
 
   viewer_certificate {
     cloudfront_default_certificate = false
-    acm_certificate_arn            = var.acm["main_arn"]
+    acm_certificate_arn            = var.env == "prod" ? var.us_east_1_acm["main_arn"] : var.us_east_1_acm["sub_arn"]
     ssl_support_method             = "sni-only"
     minimum_protocol_version       = "TLSv1.2_2018"
   }
