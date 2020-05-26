@@ -4,7 +4,7 @@ data "aws_route53_zone" "main" {
 
 resource "aws_route53_record" "frontend" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = var.sub_domain_name
+  name    = var.env == "prod" ? var.main_domain_name : var.sub_domain_name
   type    = "A"
 
   alias {
