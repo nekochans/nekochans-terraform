@@ -1,4 +1,7 @@
 # nekochans-terraform
+
+![terraform](https://github.com/nekochans/nekochans-terraform/workflows/terraform/badge.svg)
+
 nekochansで運用する小さめのWebサービスのインフラを管理するプロジェクトです。
 
 # はじめに
