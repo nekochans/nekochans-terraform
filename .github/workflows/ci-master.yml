@@ -18,6 +18,13 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.NEKOCHANS_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.NEKOCHANS_AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-1
+
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
@@ -25,3 +32,7 @@ jobs:
 
     - name: Terraform Format
       run: terraform fmt -recursive -check
+
+    - name: Terraform init
+      working-directory: ./providers/aws/environments/prod/10-acm
+      run: terraform init
