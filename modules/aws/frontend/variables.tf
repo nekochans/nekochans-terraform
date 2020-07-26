@@ -33,3 +33,9 @@ variable "us_east_1_acm" {
 
   default = {}
 }
+
+variable "test" {
+  type = map(string)
+
+  default = "abc"
+}
