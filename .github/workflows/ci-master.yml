@@ -46,3 +46,24 @@ jobs:
         terraform init
         terraform validate
         terraform plan
+
+    - name: Terraform prod/10-acm
+      working-directory: ./providers/aws/environments/prod/10-acm
+      run: |
+        terraform init
+        terraform validate
+        terraform plan
+
+    - name: Terraform prod/10-github
+      working-directory: ./providers/aws/environments/prod/10-github
+      run: |
+        terraform init
+        terraform validate
+        terraform plan
+
+    - name: Terraform prod/20-frontend
+      working-directory: ./providers/aws/environments/prod/20-frontend
+      run: |
+        terraform init
+        terraform validate
+        terraform plan
