@@ -1,4 +1,4 @@
-name: terraform
+name: ci-master
 
 on:
   push:
