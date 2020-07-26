@@ -33,6 +33,10 @@ jobs:
     - name: Terraform Format
       run: terraform fmt -recursive -check
 
-    - name: Terraform init
-      working-directory: ./providers/aws/environments/prod/10-acm
+    - name: Terraform init stg/10-acm
+      working-directory: ./providers/aws/environments/stg/10-acm
+      run: terraform init
+
+    - name: Terraform init stg/20-frontend
+      working-directory: ./providers/aws/environments/stg/20-frontend
       run: terraform init
