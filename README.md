@@ -1,4 +1,7 @@
 # nekochans-terraform
+
+![ci-master](https://github.com/nekochans/nekochans-terraform/workflows/ci-master/badge.svg)
+
 nekochansで運用する小さめのWebサービスのインフラを管理するプロジェクトです。
 
 # はじめに
