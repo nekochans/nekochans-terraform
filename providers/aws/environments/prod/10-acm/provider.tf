@@ -1,5 +1,6 @@
+// TODO 何故か東京リージョンの証明書が取得出来ないので別途調査
 provider "aws" {
-  region  = "ap-northeast-1"
+  region  = "us-east-1"
   profile = "nekochans-portfolio"
 }
 
