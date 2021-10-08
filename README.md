@@ -1,6 +1,6 @@
 # nekochans-terraform
 
-![ci-master](https://github.com/nekochans/nekochans-terraform/workflows/ci-master/badge.svg)
+[![ci](https://github.com/nekochans/nekochans-terraform/actions/workflows/ci.yml/badge.svg)](https://github.com/nekochans/nekochans-terraform/actions/workflows/ci.yml)
 
 nekochansで運用する小さめのWebサービスのインフラを管理するプロジェクトです。
 
