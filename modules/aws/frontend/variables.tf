@@ -4,18 +4,6 @@ variable "env" {
   default     = ""
 }
 
-variable "frontend_s3_bucket_name" {
-  description = "https://github.com/nekochans/portfolio-frontend Hosting S3Bucket"
-  type        = string
-  default     = "nekochans-portfolio-frontend"
-}
-
-variable "frontend_access_logs_s3_bucket_name" {
-  description = "https://github.com/nekochans/portfolio-frontend AccessLog S3Bucket"
-  type        = string
-  default     = "nekochans-portfolio-frontend-logs"
-}
-
 variable "images_s3_bucket_name" {
   description = "https://github.com/nekochans/portfolio-frontend Images S3Bucket"
   type        = string
